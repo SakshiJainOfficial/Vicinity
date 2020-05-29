@@ -1,0 +1,330 @@
+/*
+Orange color: #30336B
+
+*/
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+/*------------------------------------------------*/
+/* AboutUs Style*/
+/*------------------------------------------------*/
+
+.faq_style{
+  color: #357908; 
+  border: 1.5px solid;
+  width: 20%;
+  
+}
+
+/* ----------------------------------------------- */
+/* Navbar COMPONENTS */
+/* ----------------------------------------------- */
+
+.divleft {
+  padding-left: 59%;
+}
+.navbar-brand div {
+  color: #fff;
+  font-size: 150%;
+  height: 54px;
+  width: 54px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-right: 25px;
+  float: left;
+  padding: -15px;
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0; /*white space between the div in section*/
+}
+
+.box {
+  padding: 1%;
+}
+
+/* ----- PARAGRAPHS ----- */
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+.col img{
+  height: 320px;
+  width: 100%;
+  border-radius: 50%;
+  border:1px solid #999;
+}
+
+/* ----- ICONS ----- */
+.icon-big {
+  font-size: 350%;
+  display: block;
+  color: #30336b;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #30336b;
+  font-size: 120%;
+  margin-right: 10px;
+
+  /*secrets to align text and icons*/
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+.footerStyle {
+  background-color: #30336b;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.footer-content a:link,
+.footer-content a:visited {
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.footer-content a:hover,
+.footer-content a:active {
+  border-bottom: 2px solid #fff;
+}
+
+/* ----------------------------------------------- */
+/* Booking Container */
+/* ----------------------------------------------- */
+.container-booking {
+  background: #30336b;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 10px;
+  margin-top: -10px;
+  margin-bottom: -80px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+}
+
+.booking-form {
+  padding: 35px 70px 51px 70px;
+}
+
+list-type-ulli {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container-booking input {
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #30336b;
+  display: block;
+  position: relative;
+  z-index: 9;
+}
+
+.container-booking input::-webkit-input-placeholder {
+  color: #30336b;
+}
+.container-booking input::-moz-placeholder {
+  color: #30336b;
+}
+.container-booking input:-ms-input-placeholder {
+  color: #30336b;
+}
+.container-booking input:-moz-placeholder {
+  color: #30336b;
+}
+
+.submit {
+  background: #535358;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 23px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: #357908;
+  color: #fff;
+}
+
+.container-booking label {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  color: #fff;
+  display: block;
+}
+
+.form-group {
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  justify-content: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+}
+.form-group {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.form-destination {
+  width: 230px;
+}
+
+.form-date-from,
+.form-date-to {
+  width: 155px;
+}
+
+.form-quantity {
+  width: 80px;
+  position: relative;
+}
+
+.form-submit {
+  width: 140px;
+}
+
+.modify-qty {
+  position: absolute;
+  right: 12px;
+  font-size: 18px;
+  color: #999;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.plus {
+  top: 23px;
+}
+
+.minus {
+  bottom: 0px;
+}
+
+.form-icon {
+  position: relative;
+}
+
+.ui-datepicker-trigger {
+  position: absolute;
+  right: 16px;
+  top: 40px;
+  color: #999;
+  font-size: 16px;
+  z-index: 99;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container-booking {
+    width: calc(100% - 30px);
+    max-width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+  }
+
+  .form-destination,
+  .form-date-from,
+  .form-date-to,
+  .form-quantity {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .booking-form {
+    padding: 35px 30px 51px 30px;
+  }
+}
+
+
+/* ----------------------------------------------- */
+/* Slider */
+/* ----------------------------------------------- */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  left:10%;
+  height:30%;
+  width: 80%;
+  border: 3px;
+  border-radius: 2%;
+  background-color:white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
