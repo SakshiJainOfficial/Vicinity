@@ -15,7 +15,7 @@
         <div class="container-login" >
             <div class="wrap-login">
                 <div class="container">
-                    <form action="#" class="login-form" id="regForm">
+                    <form action="GSignUpServlet" id="regForm" method="get">
                         <center><h2>Sign up</h2></center>
                         <!-- One "tab" for each step in the form: -->
                         <div class="container">
@@ -44,7 +44,7 @@
                                             </div>
                                             <div class="my-2 ml-2" ><span class="tdinp">Year Of Establishment</span></div>
                                             <div class="wrap-input">
-                                                <input type="year" class="inputcustom" oninput="this.className = ''" name="gname" placeholder="year of establishment...">
+                                                <input type="year" class="inputcustom" oninput="this.className = ''" name="year" placeholder="year of establishment...">
                                             </div>
                                         </td></tr></table>
                                 <div class="my-2 ml-2"><span>Email</span></div>
@@ -72,7 +72,7 @@
                                 <input type="text" class="inputcustom" oninput="this.className = ''" name="city" placeholder="City...">
                             </div>
                             <div class="wrap-input">
-                                <input type="text" class="inputcustom" oninput="this.className = ''" name="area" placeholder="Landmark...">
+                                <input type="text" class="inputcustom" oninput="this.className = ''" name="landmark" placeholder="Landmark...">
                             </div>
                             <div class="wrap-input">
                                 <input type="text" class="inputcustom" oninput="this.className = ''" name="pincode" placeholder="Pincode...">
@@ -105,48 +105,50 @@
                                 <div class="my-2 ml-2"><span style="font-size: 25px">Select available events</span></div>
                                 <div class="wrap-input eventss" style="font-size: 14px;font-weight: 300">
                                     <div>
-                                        <input id="birthday" class="checkbox-custom" name="birthday" type="checkbox">
+                                        <input id="birthday" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="birthday" class="checkbox-custom-label">Birthday party</label>
                                     </div>
                                     <div>
-                                        <input id="reception" class="checkbox-custom" name="reception" type="checkbox">
+                                        <input id="reception" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="reception" class="checkbox-custom-label">Reception</label>
                                     </div>
                                     <div>
-                                        <input id="marriage" class="checkbox-custom" name="marriage" type="checkbox">
+                                        <input id="marriage" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="marriage" class="checkbox-custom-label">Marriage</label>
                                     </div>
                                     <div>
-                                        <input id="aniversary" class="checkbox-custom" name="aniversary" type="checkbox">
+                                        <input id="aniversary" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="aniversary" class="checkbox-custom-label">Aniversary</label>
                                     </div>
                                     <div>
-                                        <input id="meeting" class="checkbox-custom" name="meeting" type="checkbox">
+                                        <input id="meeting" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="meeting" class="checkbox-custom-label">Meeting</label>
                                     </div>
                                     <div>
-                                        <input id="kitty" class="checkbox-custom" name="kitty" type="checkbox">
+                                        <input id="kitty" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="kitty" class="checkbox-custom-label">Kitty party</label>
                                     </div>    <div>
-                                        <input id="bachelorp" class="checkbox-custom" name="bachelorp" type="checkbox">
+                                        <input id="bachelorp" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="bachelorp" class="checkbox-custom-label">Bachelor party</label>
                                     </div>
                                     <div>
-                                        <input id="cocktailp" class="checkbox-custom" name="cocktailp" type="checkbox">
+                                        <input id="cocktailp" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="cocktailp" class="checkbox-custom-label">Cocktail party</label>
                                     </div>
                                     <div>
-                                        <input id="conference" class="checkbox-custom" name="conference" type="checkbox">
+                                        <input id="conference" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="conference" class="checkbox-custom-label">Conference</label>
                                     </div>
                                     <div>
-                                        <input id="socialG" class="checkbox-custom" name="socialG" type="checkbox">
+                                        <input id="socialG" class="checkbox-custom" name="events" type="checkbox">
                                         <label for="socialG" class="checkbox-custom-label">Social gathering</label>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
+                        <%=(request.getAttribute("errMessage") == null) ? ""
+         : request.getAttribute("errMessage")%>
                         <div class="container"><br>
                             <div style="float:right;">
                                 <button type="button" id="prevBtn" onclick="nextPrev(-1)" style="display: none;">Previous</button>
