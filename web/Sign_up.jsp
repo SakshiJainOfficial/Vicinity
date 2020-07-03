@@ -43,7 +43,7 @@ background-image: linear-gradient(19deg, #30336b 0%, #30336b 16%);
             <div class="container">
             <a class="login-brand" href="#"><div>Sign Up</div></a>
           </div>
-          <form action="#" class="login-form">
+          <form action="Sign_upServlet" class="login-form" action="post">
 
             <div class="my-2 ml-2"><span>Name</span></div>
             <div class="wrap-input">
@@ -73,6 +73,8 @@ background-image: linear-gradient(19deg, #30336b 0%, #30336b 16%);
             <div class="wrap-input">
               <input type="password" name="confirm-password" class="inputcustom" />
             </div>
+             <%=(request.getAttribute("errMessage") == null) ? ""
+         : request.getAttribute("errMessage")%>
             <button class="btn btn-block login-form-btn">Sign Up</button>
             <div class="text-center w-full">
               <span class="text2">Already a member?</span>

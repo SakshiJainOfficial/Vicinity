@@ -4,9 +4,17 @@
         <servlet-name>GSignUpServlet</servlet-name>
         <servlet-class>com.vicinity.controller.GSignUpServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Sign_upServlet</servlet-name>
+        <servlet-class>com.vicinity.controller.Sign_upServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GSignUpServlet</servlet-name>
         <url-pattern>/GSignUpServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Sign_upServlet</servlet-name>
+        <url-pattern>/Sign_upServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
