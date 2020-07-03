@@ -9,9 +9,33 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.vicinity.bean.GSignUpBean;
 import com.vicinity.dao.GSignUpDao;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import javax.servlet.annotation.MultipartConfig;
+//import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Part;
+import org.apache.commons.io.IOUtils;
 
+//@WebServlet(urlPatterns = {"/GSignUpServlet"})
+@MultipartConfig
 public class GSignUpServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        
+        response.setContentType("text/html;charset=UTF-8");
+        InputStream inputStream=null;
+        Part filepart=request.getPart("image");
+        //System.out.println("klkflfjklf");
+//        if(filepart!=null)
+//        {
+//            System.out.println(filepart.getName());
+//        }
+        inputStream=filepart.getInputStream();
+        File f=new File("C:\\Users\\sakshi\\Documents\\NetBeansProjects\\Vicinity\\web\\Images\\r.jpeg");
+        OutputStream output=new FileOutputStream(f);
+        IOUtils.copy(inputStream, output);
+        
     String gname=request.getParameter("gname");
     String oname=request.getParameter("oname");
     String year=request.getParameter("year");

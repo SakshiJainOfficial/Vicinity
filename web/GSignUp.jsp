@@ -15,7 +15,7 @@
         <div class="container-login" >
             <div class="wrap-login">
                 <div class="container">
-                    <form action="GSignUpServlet" id="regForm" method="get">
+                    <form action="GSignUpServlet" id="regForm" method="post" enctype="multipart/form-data">
                         <center><h2>Sign up</h2></center>
                         <!-- One "tab" for each step in the form: -->
                         <div class="container">
