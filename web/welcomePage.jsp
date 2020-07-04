@@ -26,6 +26,12 @@
       rel="stylesheet"
       type="text/css"
     />
+      <script src="https://kit.fontawesome.com/e136c16ae6.js" crossorigin="anonymous"></script>
+       <link
+            href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic"
+            rel="stylesheet"
+            type="text/css"
+            />
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 
     <link rel="stylesheet" type="text/css" href="resources/css/login.css" />
@@ -46,28 +52,28 @@
                     <li class="navbar-item" style="padding-right:20px ">
                         <a class="nav-link" href="#">Profile</a>
                     </li>
-                    <li class="nav-link" href="#" style="padding-right:20px ">Current Booking</li>
-                    <li class="nav-link" style="padding-right:20px ">Booking History</li>
-                    <li class="nav-link" style="padding-right:20px ">Robinhood</li>
+                    <li class="nav-link" href="#" style="padding-right:20px ">CurrentBooking</li>
+                    <li class="nav-link" style="padding-right:20px ">BookingHistory</li>
+                    <li class="nav-link" style="padding-right:40px ">Robinhood</li>
                 </ul>
                     </div>
             </div>
         </nav>
         
-        <div class="container">
-            <div class="mySlides">
-                <div class="numbertext">1/3</div>
-                <img src="recources/img/garden1.jpg" style="width:100%;">
-            </div>
-            <div class="container">
-                <div class="numbertext">2/3</div>
-                <img src="resources/img/garden2.jpg" style="width:100%">
-            </div>
-            <div class="container">
-                <div class="numbertext">3/3</div>
-                <img src="resources/img/garden3.jpg" style="width:100%">
-            </div>
+        <div class="container row">
+        <div class="col span-1-of-3 box">
+         <img src="resources/img/garden1.jpg" alt="" srcset="">
+          
         </div>
+        <div class="col span-2-of-3 box">
+         <img src="resources/img/garden2.jpg" alt="" srcset="">
+          
+        </div>
+        <div class="col span-3-of-3 box">
+         <img src="resources/img/garden3.jpg" alt="" srcset="">
+          
+        </div>
+      </div>
         <%@include file="footer.jsp" %>
     </body>
 </html>

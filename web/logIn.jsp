@@ -67,7 +67,7 @@ background-image: linear-gradient(19deg, #30336b 0%, #30336b 16%);
               <span class="text2">Not a member yet?</span>
               <a href="Sign_up.jsp" class="text2 signup">SIGN UP</a>
             </div>
-            <input type="hidden" name="userlogin" value="0">
+            <input type="hidden" name="logincheck" value="0">
           </form>
         </div>
       </div>
