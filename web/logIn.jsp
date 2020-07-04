@@ -42,7 +42,7 @@ background-image: linear-gradient(19deg, #30336b 0%, #30336b 16%);
 <!--            <div class="container">
            
           </div>-->
-          <form action="#" class="login-form">
+          <form action="LoginServlet" class="login-form" method="post">
             <span class="login-form-title mb-4">Sign In with</span>
             <a href="#" class="btn-face"
               ><i class="fab fa-facebook-f"></i> Facebook</a
