@@ -68,6 +68,7 @@
                                 <span class="text2">Not a member yet?</span>
                                 <a href="GSignUp.jsp" class="text2 signup">SIGN UP</a>
                             </div>
+                            <input type="hidden" name="gardenlogin" value="1">
                         </form>
                     </div>
                 </div>
