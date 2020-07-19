@@ -75,9 +75,9 @@ public class GSignUpServlet extends HttpServlet {
     
     GSignUpDao signUpDao=new GSignUpDao();
     
-    String userSignedUp = GSignUpDao.GSignUpUser(gSignUpBean);
+    String userSignedUp = signUpDao.GSignUpUser(gSignUpBean);
     if(userSignedUp.equals("SUCCESS")){
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("/VerificationPending.jsp").forward(request, response);
     }
     
     else{
