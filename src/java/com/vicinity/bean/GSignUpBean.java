@@ -18,6 +18,15 @@ public class GSignUpBean {
     private String wifi;
     private String cattering;
     private String events[];
+    private String imageURL;
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+    
 
     public String getGname() {
         return gname;

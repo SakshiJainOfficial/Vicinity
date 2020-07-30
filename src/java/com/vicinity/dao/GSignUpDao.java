@@ -24,29 +24,30 @@ public class GSignUpDao {
         String wifi=gSignUpBean.getWifi();
         String cattering=gSignUpBean.getCattering();
         String events[]=gSignUpBean.getEvents();
+        String imageURL=gSignUpBean.getImageURL();
         String eventString="";
         for(int i=0;i<events.length;i++){
-            if(events[0].equals("birthday")){
+            if(events[i].equals("birthday")){
                 eventString=eventString.concat("0");
             }
-            else if(events[1].equals("reception")){
+            else if(events[i].equals("reception")){
                 eventString=eventString.concat("1");
             }
-            else if(events[2].equals("marriage")){
+            else if(events[i].equals("marriage")){
                 eventString=eventString.concat("2");
-            }else if(events[3].equals("anniversary")){
+            }else if(events[i].equals("anniversary")){
                 eventString=eventString.concat("3");
-            }else if(events[4].equals("meeting")){
+            }else if(events[i].equals("meeting")){
                 eventString=eventString.concat("4");
-            }else if(events[5].equals("kitty")){
+            }else if(events[i].equals("kitty")){
                 eventString=eventString.concat("5");
-            }else if(events[6].equals("bachelorp")){
+            }else if(events[i].equals("bachelorp")){
                 eventString=eventString.concat("6");
-            }else if(events[7].equals("cocktailp")){
+            }else if(events[i].equals("cocktailp")){
                 eventString=eventString.concat("7");
-            }else if(events[8].equals("conference")){
+            }else if(events[i].equals("conference")){
                 eventString=eventString.concat("8");
-            }else if(events[9].equals("socialG")){
+            }else if(events[i].equals("socialG")){
                 eventString=eventString.concat("9");
             }
         }
@@ -55,7 +56,7 @@ public class GSignUpDao {
         PreparedStatement ps=null;
         try{
             con=DBConnection.createConnection();
-            String query="insert into gardendetails values(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            String query="insert into gardendetails values(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)";
             ps=con.prepareStatement(query);
             ps.setString(1, gname);
             ps.setString(2, oname);
@@ -72,6 +73,8 @@ public class GSignUpDao {
             ps.setString(13, nonacRooms);
             ps.setString(14, wifi);
             ps.setString(15, cattering);
+            ps.setString(16, eventString);
+            ps.setString(17, imageURL);
             
             int i=ps.executeUpdate();
             if(i!=0){

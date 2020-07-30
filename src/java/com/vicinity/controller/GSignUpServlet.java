@@ -24,17 +24,7 @@ public class GSignUpServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
         
         response.setContentType("text/html;charset=UTF-8");
-        InputStream inputStream=null;
-        Part filepart=request.getPart("image");
-        //System.out.println("klkflfjklf");
-//        if(filepart!=null)
-//        {
-//            System.out.println(filepart.getName());
-//        }
-        inputStream=filepart.getInputStream();
-        File f=new File("C:\\Users\\sakshi\\Documents\\NetBeansProjects\\Vicinity\\web\\Images\\r.jpeg");
-        OutputStream output=new FileOutputStream(f);
-        IOUtils.copy(inputStream, output);
+       
         
     String gname=request.getParameter("gname");
     String oname=request.getParameter("oname");
@@ -53,7 +43,20 @@ public class GSignUpServlet extends HttpServlet {
     String cattering=request.getParameter("cattering");
     String events[]=request.getParameterValues("events");
     
+     
     
+    InputStream inputStream=null;
+        Part filepart=request.getPart("image");
+        //System.out.println("klkflfjklf");
+//        if(filepart!=null)
+//        {
+//            System.out.println(filepart.getName());
+//        }
+        inputStream=filepart.getInputStream();
+        File f=new File("C:\\Users\\sakshi\\Documents\\NetBeansProjects\\Vicinity_AdminPanel\\web\\Images\\"+gname+".png");
+        OutputStream output=new FileOutputStream(f);
+        IOUtils.copy(inputStream, output);
+    String imageURL="C:\\Users\\sakshi\\Documents\\NetBeansProjects\\Vicinity_AdminPanel\\web\\Images\\"+gname+".png";
     GSignUpBean gSignUpBean=new GSignUpBean();
     
     gSignUpBean.setGname(gname);
@@ -72,6 +75,7 @@ public class GSignUpServlet extends HttpServlet {
     gSignUpBean.setWifi(wifi);
     gSignUpBean.setCattering(cattering);
     gSignUpBean.setEvents(events);
+    gSignUpBean.setImageURL(imageURL);
     
     GSignUpDao signUpDao=new GSignUpDao();
     
