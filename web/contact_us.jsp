@@ -34,7 +34,7 @@
         <div class="container-contact100">
 
     <div class="wrap-contact100">
-      <form class="contact100-form validate-form">
+        <form class="contact100-form validate-form" action="" method="post">
         <span class="contact100-form-title">
           Send Us A Message
         </span>
@@ -86,7 +86,7 @@
             </span>
 
             <span class="txt3">
-              Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+              554 Gumasta Nagar 1st floor, Near Ranjeet Hanuman Mandir, Madhya Pradesh, India
             </span>
           </div>
         </div>
@@ -102,7 +102,7 @@
             </span>
 
             <span class="txt3">
-              +1 800 1236879
+              +91 7999154566
             </span>
           </div>
         </div>
@@ -118,7 +118,7 @@
             </span>
 
             <span class="txt3">
-              contact@example.com
+              jainsakshi0826@gmail.com
             </span>
           </div>
         </div>
@@ -126,11 +126,11 @@
                 <div class="dis-flex size1 p-b-47">
           <div class="txt1 p-r-25">
            <div class="social-link">
-                      <a href="#"><i class="fab fa-facebook-f white-text mr-4"> </i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100017441899267"><i class="fab fa-facebook-f white-text mr-4"> </i></a>
                       <a href="#"><i class="fab fa-twitter white-text mr-4"> </i></a>
                       <a href="#"> <i class="fab fa-google-plus-g white-text mr-4"> </i></a>
-                      <a href="#"><i class="fab fa-linkedin-in white-text mr-4"> </i></a>
-                      <a href="#"><i class="fab fa-instagram white-text"> </i></a>
+                      <a href="https://www.linkedin.com/in/sakshij01/"><i class="fab fa-linkedin-in white-text mr-4"> </i></a>
+                      <a href="https://www.instagram.com/saaj_0826/?hl=en"><i class="fab fa-instagram white-text"> </i></a>
                     </div>
             
             </div>
