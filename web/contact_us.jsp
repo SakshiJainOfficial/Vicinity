@@ -34,7 +34,7 @@
         <div class="container-contact100">
 
     <div class="wrap-contact100">
-        <form class="contact100-form validate-form" action="" method="post">
+        <form class="contact100-form validate-form" action="Contact_UsServlet" method="post">
         <span class="contact100-form-title">
           Send Us A Message
         </span>
@@ -68,7 +68,7 @@
         </div>
 
         <div class="container-contact100-form-btn">
-          <button class="contact100-form-btn">
+            <button class="contact100-form-btn" type="submit">
             Send Message
           </button>
         </div>
