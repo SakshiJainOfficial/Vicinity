@@ -30,7 +30,7 @@
         <!-- Header -->
         <%@include file="header.jsp" %>
         <!-- Header-->
-        <br>
+        
         <div class="container">
             <h2>Bringing Venue to You!</h2>
             <p class="long-copy">
@@ -43,7 +43,7 @@
                     <div class="form-group">
                         <div class="form-destination">
                             <label for="destination">Destination</label>
-                            <input type="text" id="destination" name="destination" placeholder="EG. HAWAII" />
+                            <input type="text" id="destination" name="destination" placeholder="EG. GHOONGAT GARDEN" />
                         </div>
                         <div class="form-date-from form-icon">
                             <label for="date_from">From</label>
