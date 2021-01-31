@@ -42,18 +42,32 @@ background-image: linear-gradient(19deg, #30336b 0%, #30336b 16%);
             <div class="container">
            
           </div>
-          <form action="#" class="login-form">
+          <form action="ChangePassword" class="login-form">
               <center> <h3>You are verified successfully</h3>
-            <span class="login-form-title mb-4">Login  With One Time Password</span></center>
-            <div class="my-2 ml-2"><span>Username</span></div>
+            <span class="login-form-title mb-4">Change your password</span></center>
+            <br>
+            <br>
+              <div class="my-2 ml-2"><span>Username</span></div>
             <div class="wrap-input">
               <input type="text" name="username" class="inputcustom" />
+            </div>  
+              <div class="my-2 ml-2"><span>New Password</span></div>
+            <div class="wrap-input">
+              <input type="text" name="newPassword" class="inputcustom" />
             </div>
             <div class="my-2 ml-2">
-              <span>Password</span>
+              <span>Last Password</span>
             </div>
             <div class="wrap-input">
-              <input type="password" name="password" class="inputcustom" />
+              <input type="lastPassword" name="lastPassword" class="inputcustom" />
+            </div>
+              <div class="my-2 ml-2"><span>New Password</span></div>
+            <div class="wrap-input">
+              <input type="text" name="newPassword" class="inputcustom" />
+            </div>
+              <div class="my-2 ml-2"><span>Verify Password</span></div>
+            <div class="wrap-input">
+              <input type="text" name="verifyPassword" class="inputcustom" />
             </div>
             <button class="btn btn-block login-form-btn">Login</button>
              </form>

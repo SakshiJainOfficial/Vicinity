@@ -16,6 +16,14 @@
         <servlet-name>Contact_UsServlet</servlet-name>
         <servlet-class>com.vicinity.controller.Contact_UsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ChangePassword</servlet-name>
+        <servlet-class>com.vicinity.controller.ChangePassword</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FilterServlet</servlet-name>
+        <servlet-class>com.vicinity.controller.FilterServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GSignUpServlet</servlet-name>
         <url-pattern>/GSignUpServlet</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>Contact_UsServlet</servlet-name>
         <url-pattern>/Contact_UsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChangePassword</servlet-name>
+        <url-pattern>/ChangePassword</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FilterServlet</servlet-name>
+        <url-pattern>/FilterServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

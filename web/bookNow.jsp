@@ -33,7 +33,7 @@
 
         <section class="section-booking">
             <div class="container-booking" style="margin-bottom:-150px">
-                <form id="booking-form" class="booking-form" method="POST" action="playground.jsp">
+                <form id="booking-form" class="booking-form" method="get" action="FilterServlet">
                     <div class="form-group">
                         <div class="form-destination">
                             <label for="destination">Destination</label>
@@ -84,7 +84,7 @@
                                 <input type="email" class="form-control" placeholder="E.g: BhawarKua">
                             </div>
                             <div class="dropdown-divider"></div>
-                            <button type="submit" class="btn btn-success">Search</button>
+                           
                         </form>
                         <div class="dropdown-divider"></div>
                     </div>
@@ -143,7 +143,7 @@
                                             <div class="dropdown-divider"></div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-success">Search</button>
+                                                
                                             </div> 
                                         </form>
                                     </div>

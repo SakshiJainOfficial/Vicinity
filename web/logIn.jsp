@@ -62,7 +62,7 @@ background-image: linear-gradient(19deg, #30336b 0%, #30336b 16%);
             <div class="wrap-input">
               <input type="password" name="password" class="inputcustom" />
             </div>
-            <button class="btn btn-block login-form-btn">Sign In</button>
+            <button class="btn btn-block login-form-btn">LOGIN</button>
             <div class="text-center w-full">
               <span class="text2">Not a member yet?</span>
               <a href="Sign_up.jsp" class="text2 signup">SIGN UP</a>

@@ -10,10 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class LoginServlet extends HttpServlet {  
-     public LoginServlet() // default constructor
-    {
-    }
- 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String username = request.getParameter("username");
@@ -35,7 +31,16 @@ public class LoginServlet extends HttpServlet {
              request.getRequestDispatcher("/welcomePage.jsp").forward(request, response);//RequestDispatcher is used to send the control to the invoked page.
          }
         else if(userValidate.equals("SUCCESS02")){
-             request.setAttribute("username", username); //with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
+           
+            
+             request.setAttribute("username", username);
+             //with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
+             request.getRequestDispatcher("/GFirstTimeLogin.jsp").forward(request, response);
+        }else if(userValidate.equals("SUCCESS03")){
+           
+            
+             request.setAttribute("username", username);
+             //with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
              request.getRequestDispatcher("/welcomePage.jsp").forward(request, response);
         }
          else

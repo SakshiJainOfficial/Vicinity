@@ -24,7 +24,7 @@ public class Contact_UsServlet extends HttpServlet {
         try {
 			// Construct data
 			
-			String apiKey = "apikey="+"qeODZkvJYg4-Owwj3mAafxjNh08RiAlUQkW9Y0RfYX";
+			String apiKey = "apikey="+"qeODZkvJYg4-SrQeIKrVeTxPbI2r4VXGFGYmYBRTEB";
 			String message = "&message=" + request.getParameter("message");
 			String sender = "&sender=" + "TXTLCL";
 			String numbers = "&numbers=" + "917999154566";

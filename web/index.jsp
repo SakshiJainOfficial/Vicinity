@@ -30,7 +30,7 @@
         <!-- Header -->
         <%@include file="header.jsp" %>
         <!-- Header-->
-        
+
         <div class="container">
             <h2>Bringing Venue to You!</h2>
             <p class="long-copy">
@@ -39,7 +39,7 @@
         </div>
         <section class="section-booking">
             <div class="container-booking">
-                <form id="booking-form" class="booking-form" method="POST" action="bookNow.jsp">
+                <form id="booking-form" class="booking-form" method="Get" action="FilterServlet">
                     <div class="form-group">
                         <div class="form-destination">
                             <label for="destination">Destination</label>
@@ -56,6 +56,66 @@
                         <span class="modify-qty minus" onClick="Giam()"><i class="zmdi zmdi-chevron-down"></i></span>
                         <div class="form-submit">
                             <input type="submit" id="submit" class="submit" value="Book now" />
+                        </div>
+                    </div>
+
+
+                    <br>
+                    
+                    <div class="d-flex">
+                        
+                        <div class="dropdown mr-1" style="padding-left: 3px">
+                            <button type="button" class="btn btn-success dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sort By Price
+                            </button>
+                            <input type="hidden" id="datebox1" name="SortByPrice">
+                            <div class="dropdown-menu" id="demolist1" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Low-To-High</a>
+                                <a class="dropdown-item" href="#">High-To-low</a>
+                                
+                            </div>
+                        </div> 
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success dropdown-toggle" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                                City
+                            </button>
+                            <input type="hidden" id="datebox2" name="City"> 
+                            <div class="dropdown-menu" id="demolist2" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Indore</a>
+                                <a class="dropdown-item" href="#">Bhopal</a>
+                                <a class="dropdown-item" href="#">Jaipur</a>
+                                <a class="dropdown-item" href="#">Dewas</a>
+                                <a class="dropdown-item" href="#">Jabalpur</a>
+                                <a class="dropdown-item" href="#">Gwalior</a>
+                                <a class="dropdown-item" href="#">Ujjain</a>
+                            </div>
+                        </div>
+                        <div class="btn-group" style="padding-left: 5px">
+                            <button type="button" class="btn btn-success dropdown-toggle" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                                AC/Non-AC Rooms
+                            </button>
+                            <input type="hidden" id="datebox3" name="AcNonAcRooms">
+                            <div class="dropdown-menu" id="demolist3" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">AC Room</a>
+                                <a class="dropdown-item" href="#">Non-AC Rooms</a>
+
+                            </div>
+                        </div>
+
+                        <div class="btn-group" style="padding-left: 5px">
+                            <button type="button" class="btn btn-success dropdown-toggle" id="dropdownRating" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Rating
+                            </button>
+                            <input type="hidden" id="datebox4" name="rating">
+                            <div class="dropdown-menu" id="demolist4" style="background-color: #30336B;" aria-labelledby="dropdownRating">
+
+                                <a class="dropdown-item alert-success" href="#">5 Excellent</a>
+                                <a class="dropdown-item alert-primary" href="#">4 Very-Good</a>
+                                <a class="dropdown-item alert-secondary" href="#">3 Good</a>
+                                <a class="dropdown-item alert-warning" href="#">2 Fair</a>
+                                <a class="dropdown-item alert-danger" href="#">1 Okay</a>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -169,5 +229,25 @@
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
         <script src="resources/js/main.js"></script>
+        <script>
+                            $('#demolist1 a').on('click', function() {
+                                $('#datebox1').val($(this).html());
+                            });
+        </script>
+        <script>
+                            $('#demolist2 a').on('click', function() {
+                                $('#datebox2').val($(this).html());
+                            });
+        </script>
+        <script>
+                            $('#demolist3 a').on('click', function() {
+                                $('#datebox3').val($(this).html());
+                            });
+        </script>
+        <script>
+                            $('#demolist4 a').on('click', function() {
+                                $('#datebox4').val($(this).html());
+                            });
+        </script>
     </body>
 </html>

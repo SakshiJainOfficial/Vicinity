@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #30336B">
     <div class="container float-right">
-        <a class="navbar-brand" href="index.jsp"><div>Vicinity</div></a>
+        <a class="navbar-brand" href="index.jsp"><div style="font-size: 50px">Vicinity</div></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
