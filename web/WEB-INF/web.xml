@@ -24,6 +24,10 @@
         <servlet-name>FilterServlet</servlet-name>
         <servlet-class>com.vicinity.controller.FilterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BookServlet</servlet-name>
+        <servlet-class>com.vicinity.controller.BookServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GSignUpServlet</servlet-name>
         <url-pattern>/GSignUpServlet</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>FilterServlet</servlet-name>
         <url-pattern>/FilterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookServlet</servlet-name>
+        <url-pattern>/BookServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

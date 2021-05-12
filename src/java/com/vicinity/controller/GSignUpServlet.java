@@ -53,10 +53,10 @@ public class GSignUpServlet extends HttpServlet {
 //            System.out.println(filepart.getName());
 //        }
         inputStream=filepart.getInputStream();
-        File f=new File("C:\\Users\\sakshi\\Documents\\NetBeansProjects\\Vicinity_AdminPanel\\web\\Images\\"+gname+".png");
+        File f=new File("C:\\Users\\sakshi\\Documents\\NetBeansProjects\\Vicinity\\web\\Images\\"+gname+".png");
         OutputStream output=new FileOutputStream(f);
         IOUtils.copy(inputStream, output);
-    String imageURL="C:\\Users\\sakshi\\Documents\\NetBeansProjects\\Vicinity_AdminPanel\\web\\Images\\"+gname+".png";
+    String imageURL="C:\\Users\\sakshi\\Documents\\NetBeansProjects\\Vicinity\\web\\Images\\"+gname+".png";
     GSignUpBean gSignUpBean=new GSignUpBean();
     
     gSignUpBean.setGname(gname);
@@ -76,6 +76,7 @@ public class GSignUpServlet extends HttpServlet {
     gSignUpBean.setCattering(cattering);
     gSignUpBean.setEvents(events);
     gSignUpBean.setImageURL(imageURL);
+    
     
     GSignUpDao signUpDao=new GSignUpDao();
     

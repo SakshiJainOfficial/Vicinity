@@ -47,25 +47,23 @@ background-image: linear-gradient(19deg, #30336b 0%, #30336b 16%);
             <span class="login-form-title mb-4">Change your password</span></center>
             <br>
             <br>
-              <div class="my-2 ml-2"><span>Username</span></div>
-            <div class="wrap-input">
-              <input type="text" name="username" class="inputcustom" />
-            </div>  
+               
               <div class="my-2 ml-2"><span>New Password</span></div>
             <div class="wrap-input">
               <input type="text" name="newPassword" class="inputcustom" />
             </div>
+              <div class="my-2 ml-2"><span>Username</span></div>
+            <div class="wrap-input">
+              <input type="text" name="username" class="inputcustom" />
+            </div> 
             <div class="my-2 ml-2">
               <span>Last Password</span>
             </div>
             <div class="wrap-input">
               <input type="lastPassword" name="lastPassword" class="inputcustom" />
             </div>
-              <div class="my-2 ml-2"><span>New Password</span></div>
-            <div class="wrap-input">
-              <input type="text" name="newPassword" class="inputcustom" />
-            </div>
-              <div class="my-2 ml-2"><span>Verify Password</span></div>
+          
+              <div class="my-2 ml-2"><span>Confirm Password</span></div>
             <div class="wrap-input">
               <input type="text" name="verifyPassword" class="inputcustom" />
             </div>

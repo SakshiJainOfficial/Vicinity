@@ -63,6 +63,7 @@ public class FilterServlet extends HttpServlet {
                     row.add(resultSet.getString(i));
                 }
                 Rows1.add(row);
+                System.out.println(row);
             }
         } catch (SQLException e) {
             e.printStackTrace();

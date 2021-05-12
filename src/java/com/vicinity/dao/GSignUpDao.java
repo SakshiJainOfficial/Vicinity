@@ -25,6 +25,7 @@ public class GSignUpDao {
         String cattering=gSignUpBean.getCattering();
         String events[]=gSignUpBean.getEvents();
         String imageURL=gSignUpBean.getImageURL();
+       
         String eventString="";
         for(int i=0;i<events.length;i++){
             if(events[i].equals("birthday")){
@@ -56,7 +57,7 @@ public class GSignUpDao {
         PreparedStatement ps=null;
         try{
             con=DBConnection.createConnection();
-            String query="insert into gardendetails values(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)";
+            String query="insert into gardendetails values(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,0)";
             ps=con.prepareStatement(query);
             ps.setString(1, gname);
             ps.setString(2, oname);

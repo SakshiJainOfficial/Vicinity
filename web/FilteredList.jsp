@@ -24,7 +24,7 @@
 
         <title>Filtered Gardens</title>
     </head>
-   <body>
+    <body>
 
         <!--Header-->
         <%@include file="header.jsp" %>
@@ -40,7 +40,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        
+
                         <img id="myImage" class="img-responsive" src="" alt="" height="30%" width="30%">
 
                         <label><b>Garden ID</b>-</label>     
@@ -111,7 +111,12 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <form action="BookServlet" method="get">
+                            <input type="hidden" id="eventId17" name="eventId17"/>
+
+                            <button type="submit" class="btn btn-secondary xyz">Book</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -126,15 +131,19 @@
                 <h5 class="card-title"><%= Rows1.get(i).get(1)%></h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <form method="post">
-                <button type="button" class="btn btn-primary garden" data-toggle="modal" data-target="#staticBackdrop" data-id="Images/<%= Rows1.get(i).get(1)%>.png" data-todo='{"id1":"<%= Rows1.get(i).get(0)%>","gardenname":"<%= Rows1.get(i).get(1)%>","ownername":"<%= Rows1.get(i).get(2)%>","yearofestablishment":"<%= Rows1.get(i).get(3)%>","email":"<%= Rows1.get(i).get(4)%>","phoneno":"<%= Rows1.get(i).get(5)%>","price":"<%= Rows1.get(i).get(6)%>","address":"<%= Rows1.get(i).get(7)%>","city":"<%= Rows1.get(i).get(8)%>","landmark":"<%= Rows1.get(i).get(9)%>","pincode":"<%= Rows1.get(i).get(10)%>","totalbookingstilldate":"<%= Rows1.get(i).get(11)%>","acrooms":"<%= Rows1.get(i).get(12)%>","nonacrooms":"<%= Rows1.get(i).get(13)%>","wifi":"<%= Rows1.get(i).get(14)%>","catering":"<%= Rows1.get(i).get(15)%>"}'>Details</button>
-                 </form>
+                    <button type="button" class="btn btn-primary garden" data-toggle="modal" data-target="#staticBackdrop" data-id="Images/<%= Rows1.get(i).get(1)%>.png" data-todo='{"id1":"<%= Rows1.get(i).get(0)%>","gardenname":"<%= Rows1.get(i).get(1)%>","ownername":"<%= Rows1.get(i).get(2)%>","yearofestablishment":"<%= Rows1.get(i).get(3)%>","email":"<%= Rows1.get(i).get(4)%>","phoneno":"<%= Rows1.get(i).get(5)%>","price":"<%= Rows1.get(i).get(6)%>","address":"<%= Rows1.get(i).get(7)%>","city":"<%= Rows1.get(i).get(8)%>","landmark":"<%= Rows1.get(i).get(9)%>","pincode":"<%= Rows1.get(i).get(10)%>","totalbookingstilldate":"<%= Rows1.get(i).get(11)%>","acrooms":"<%= Rows1.get(i).get(12)%>","nonacrooms":"<%= Rows1.get(i).get(13)%>","wifi":"<%= Rows1.get(i).get(14)%>","catering":"<%= Rows1.get(i).get(15)%>"}'>Details</button>
+                </form>
             </div>
         </div>
         <%}%>
         <br>
+       
         <script type="text/javascript">$(document).on("click", ".garden", function() {
                 var eventId1 = $(this).data('todo').id1;
-                $('#idHolder1').html(eventId1);
+                 $('#idHolder1').html(eventId1);
+                   
+                 document.getElementById('eventId17').value = eventId1;
+          
                 var eventId2 = $(this).data('todo').gardenname;
                 $('#idHolder2').html(eventId2);
                 var eventId3 = $(this).data('todo').ownername;
@@ -165,9 +174,10 @@
                 $('#idHolder15').html(eventId15);
                 var eventId16 = $(this).data('todo').catering;
                 $('#idHolder16').html(eventId16);
+                
                 var myImageId = $(this).data('id');
                 $(".modal-body #myImage").attr("src", myImageId);
-                
+                     
             });
         </script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
